@@ -1,0 +1,37 @@
+<div class="home">
+  <div class="home-hero">
+    <div class="home-hero__content uk-container uk-container-small">
+      <h1 class="uk-heading-medium">Простір для думки</h1>
+      <p>Авторський блог Валентина Василевського</p>
+    </div>
+
+    <div class="home-hero__shevron">
+      <div class="home-hero__shevron-left"></div>
+      <div class="home-hero__shevron-right"></div>
+    </div>
+  </div>
+
+  <div class="home-content">
+    <div class="home-blog uk-section uk-section-default">
+      <div class="uk-container uk-container-medium">
+
+        <div class="uk-grid-medium uk-grid-row-small uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-match" uk-grid>
+          <div *ngFor="let post of $blogPosts | async">
+
+            <div class="uk-card uk-card-default uk-card-hover uk-card-small" routerLink="/blog/{{post.slug}}">
+              <div class="uk-card-media-top">
+                <img src={{post.thumbnail}} alt="">
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">{{post.title}}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

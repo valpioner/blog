@@ -1,0 +1,35 @@
+.nav {
+  position: absolute;
+  height: 50px;
+  left: 0;
+  right: 0;
+  top: 10px;
+  width: auto;
+  display: flex;
+  z-index: 1;
+  user-select: none;
+
+  img {
+    height: 30px;
+  }
+
+  .uk-navbar-item,
+  .uk-navbar-toggle {
+    min-height: auto;
+    color: white;
+  }
+  .uk-navbar-nav > li > a {
+    min-height: auto;
+    color: white;
+  }
+
+  .uk-logo {
+    font-family: "overseer-italic";
+    font-size: 2rem;
+    letter-spacing: 0.03rem;
+  }
+
+  .uk-button-default {
+    color: white;
+  }
+}
