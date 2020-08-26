@@ -1,5 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router, ROUTES } from '@angular/router';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { map } from 'rxjs/operators';
 
@@ -11,13 +15,10 @@ declare var ng: any;
   styleUrls: ['./blog.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private scully: ScullyRoutesService
-  ) {}
+  constructor(private scully: ScullyRoutesService) {}
 
   $blogPosts = this.scully.available$.pipe(
     map((routes) =>

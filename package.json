@@ -6,11 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "jam": "ng build && npm run scully",
-    "jam:prod": "ng build --prod && npm run scully -- --nw",
+    "jam:prod": "ng build --prod && npm run scully -- --scanRoutes --nw",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
+    "scully:build": "npm run scully -- --scanRoutes",
     "scully:serve": "scully serve",
     "scully:watch": "npm run scully -- --watch"
   },
