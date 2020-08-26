@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { ScullyRoutesService, TransferStateService } from '@scullyio/ng-lib';
 import { combineLatest } from 'rxjs';
 import { pluck, map } from 'rxjs/operators';
 
@@ -13,15 +13,28 @@ import { pluck, map } from 'rxjs/operators';
 export class BlogPostComponent {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private scully: ScullyRoutesService
+    private scully: ScullyRoutesService,
+    private transferStateService: TransferStateService
   ) {}
 
-  $blogPostMetadata = combineLatest([
-    this.activatedRoute.params.pipe(pluck('postId')),
-    this.scully.available$,
-  ]).pipe(
-    map(([postId, routes]) =>
-      routes.find((route) => route.route === `/blog/${postId}`)
+  $blogPost = this.transferStateService.useScullyTransferState(
+    'allPosts',
+    combineLatest([
+      this.activatedRoute.params.pipe(pluck('postId')),
+      this.scully.available$,
+    ]).pipe(
+      map(([postId, routes]) =>
+        routes.find((route) => route.route === `/blog/${postId}`)
+      )
     )
   );
+
+  // $blogPostMetadata = combineLatest([
+  //   this.activatedRoute.params.pipe(pluck('postId')),
+  //   this.scully.available$,
+  // ]).pipe(
+  //   map(([postId, routes]) =>
+  //     routes.find((route) => route.route === `/blog/${postId}`)
+  //   )
+  // );
 }
