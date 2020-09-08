@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     private transferStateService: TransferStateService
   ) {
     this.blogPosts$ = this.transferStateService.useScullyTransferState(
-      'allPosts',
+      'blogPostRoutes',
       this.scully.available$.pipe(
         map((routes) =>
           routes.filter(

@@ -17,24 +17,24 @@ export class BlogPostComponent {
     private transferStateService: TransferStateService
   ) {}
 
-  $blogPost = this.transferStateService.useScullyTransferState(
-    'allPosts',
-    combineLatest([
-      this.activatedRoute.params.pipe(pluck('postId')),
-      this.scully.available$,
-    ]).pipe(
-      map(([postId, routes]) =>
-        routes.find((route) => route.route === `/blog/${postId}`)
-      )
-    )
-  );
-
-  // $blogPostMetadata = combineLatest([
-  //   this.activatedRoute.params.pipe(pluck('postId')),
-  //   this.scully.available$,
-  // ]).pipe(
-  //   map(([postId, routes]) =>
-  //     routes.find((route) => route.route === `/blog/${postId}`)
+  // $blogPost = this.transferStateService.useScullyTransferState(
+  //   `blogPosts`,
+  //   combineLatest([
+  //     this.activatedRoute.params.pipe(pluck('postId')),
+  //     this.scully.available$,
+  //   ]).pipe(
+  //     map(([postId, routes]) =>
+  //       routes.find((route) => route.route === `/blog/${postId}`)
+  //     )
   //   )
   // );
+
+  $blogPostMetadata = combineLatest([
+    this.activatedRoute.params.pipe(pluck('postId')),
+    this.scully.available$,
+  ]).pipe(
+    map(([postId, routes]) =>
+      routes.find((route) => route.route === `/blog/${postId}`)
+    )
+  );
 }
