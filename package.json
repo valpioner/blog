@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "jam": "ng build && npm run scully",
+    "jam": "ng build && npm run scully -- --watch",
     "jam:prod": "ng build --prod --stats-json && npm run scully -- --scanRoutes --nw",
     "test": "ng test",
     "lint": "ng lint",

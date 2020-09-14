@@ -12,6 +12,11 @@
   transition: transform 300ms ease, box-shadow 300ms ease;
   transform: translateY(0);
 
+  &:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
   &:focus {
     outline: none;
   }

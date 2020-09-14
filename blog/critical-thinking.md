@@ -1,12 +1,13 @@
 ---
-title: "Критичне мислення"
+title: "Що таке 'Критичне мислення' і чому воно таке необхідне"
 description: "blog description"
-authorName: "Валентин Василевський"
-published: true
-slug: critical-thinking
 thumbnail: https://images.alphacoders.com/943/thumb-1920-943148.jpg
+slug: critical-thinking
+category: "Саморозвиток"
+tags: ["Саморозвиток"]
+published: true
 ---
 
-# Test post
+## Що таке 'Критичне мислення' і чому воно таке необхідне
 
-How are you doing?
+Текст

@@ -15,12 +15,14 @@ export class BlogPostComponent {
     private activatedRoute: ActivatedRoute,
     private scully: ScullyRoutesService,
     private transferStateService: TransferStateService
-  ) {}
+  ) {
+    console.log(this.activatedRoute.snapshot);
+  }
 
-  $blogPost = this.transferStateService.useScullyTransferState(
+  blogPost$ = this.transferStateService.useScullyTransferState(
     'allPosts',
     combineLatest([
-      this.activatedRoute.params.pipe(pluck('postId')),
+      this.activatedRoute.params.pipe(pluck('slug')),
       this.scully.available$,
     ]).pipe(
       map(([postId, routes]) =>

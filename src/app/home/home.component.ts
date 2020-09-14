@@ -17,6 +17,7 @@ import { map, tap } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]> = this.scully.available$;
   blogPosts$: Observable<any>;
+  tags = ['Саморозвиток', 'Освіта', 'Особисте', 'Подорожі', 'ІТ', 'Гроші'];
 
   constructor(
     private scully: ScullyRoutesService,
@@ -41,19 +42,4 @@ export class HomeComponent implements OnInit {
       console.log(links);
     });
   }
-
-  // getAllBlogPosts(): Observable<any> {
-  //   return this.transferStateService.useScullyTransferState(
-  //     'allPosts',
-  //     this.scully.available$.pipe(
-  //       map((routes) =>
-  //         routes.filter(
-  //           (route) =>
-  //             route.route.startsWith('/blog/') &&
-  //             route.sourceFile.endsWith('.md')
-  //         )
-  //       )
-  //     )
-  //   );
-  // }
 }

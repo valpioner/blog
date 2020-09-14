@@ -1,12 +1,13 @@
 ---
-title: "Як фільтрувати інформацію"
+title: "Як фільтрувати інформацію з інтернету та телебачення"
 description: "blog description"
-authorName: "Валентин Василевський"
-published: true
-slug: how-to-filter-information
 thumbnail: https://images.alphacoders.com/943/thumb-1920-943148.jpg
+slug: how-to-filter-information
+category: Саморозвиток
+tags: ["Саморозвиток", "Освіта"]
+published: true
 ---
 
-# Test post
+## Як фільтрувати інформацію з інтернету та телебачення
 
-How are you doing?
+Text

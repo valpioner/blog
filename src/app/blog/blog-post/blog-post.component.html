@@ -1,8 +1,8 @@
-<h1 *ngIf="$blogPost | async as blogPost">Blog Post by {{blogPost.authorName}}</h1>
-<hr>
+<div class="blog-post uk-container uk-container-medium uk-margin uk-margin-top">
+  <!-- <div *ngIf="blogPost$ | async as blogPost">
+    <h1>{{blogPost.title}}</h1>
+    <img loading="lazy" src={{blogPost.thumbnail}} alt="valpioner.com">
+  </div> -->
 
-<!-- This is where Scully will inject the static HTML -->
-<scully-content></scully-content>
-
-<hr>
-<h4>End of content</h4>
+  <scully-content></scully-content>
+</div>
