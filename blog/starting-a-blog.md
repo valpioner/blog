@@ -1,7 +1,7 @@
 ---
 title: "Починаю блог, вступне слово"
 description: "blog description"
-thumbnail: https://images.alphacoders.com/943/thumb-1920-943148.jpg
+thumbnail: https://drive.google.com/drive/folders/1cY4Jp1H2P9pgKu3LMvfv54jBCA9LufCG?usp=sharing
 slug: starting-a-blog
 category: Особисте
 tags: ["Саморозвиток", "Освіта", "Особисте", "життя", "суспільство"]
