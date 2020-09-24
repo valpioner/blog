@@ -1,7 +1,7 @@
 ---
 title: "Починаю блог, вступне слово"
 description: "blog description"
-thumbnail: http://drive.google.com/uc?export=view&id=1JNmhkqbzNqNqq3O--oWv5JN5tDvxqtVY
+thumbnail: https://drive.google.com/uc?export=view&id=1JNmhkqbzNqNqq3O--oWv5JN5tDvxqtVY
 slug: starting-a-blog
 category: Особисте
 tags: ["Саморозвиток", "Освіта", "Особисте", "життя", "суспільство"]
