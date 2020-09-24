@@ -6,7 +6,7 @@ slug: starting-a-blog
 category: Особисте
 tags: ["Саморозвиток", "Освіта", "Особисте", "життя", "суспільство"]
 published: true
-publishDate: 21.09.2020
+publishDate: 24.09.2020
 ---
 
 <span style="display:block;text-align:center">
@@ -14,6 +14,8 @@ publishDate: 21.09.2020
 ## Починаю блог, вступне слово
 
 ![valpioner.com](https://drive.google.com/uc?export=view&id=1JNmhkqbzNqNqq3O--oWv5JN5tDvxqtVY)
+
+</span>
 
 #### Я маю що сказати цьому світу
 

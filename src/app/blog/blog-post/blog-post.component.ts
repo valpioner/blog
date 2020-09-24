@@ -41,7 +41,9 @@ export class BlogPostComponent implements OnInit {
     script.src = 'https://valpioner.disqus.com/embed.js';
     script.text = `
       var disqus_config = function () {
-        this.page.url = ${this._document.URL};  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = ${
+          this._document.URL.split('?')[0]
+        };  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = ${slug}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
     `;
