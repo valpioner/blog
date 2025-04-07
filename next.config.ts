@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ['mdx', 'ts', 'tsx'],
+  // Note: Using the Rust compiler means we cannot use
+  // rehype or remark plugins. For my app, this is fine.
+  // It might speed up compile time.
+  experimental: {
+    mdxRs: true,
+    viewTransition: true
+  }
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
